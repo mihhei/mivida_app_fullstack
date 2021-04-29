@@ -1,0 +1,498 @@
+@import '~materialize-css/dist/css/materialize.min.css';
+
+* {
+  font-family: 'Tenor Sans', sans-serif;
+  color: rgb(186, 147, 94);
+  box-sizing: border-box;
+}
+
+input.input-color {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1 px 0 0 #fff !important;
+}
+
+input.input-color + label {
+  color: #ffffff !important;
+}
+
+input.input-color:focus {
+  border-bottom: 1px solid #ffeb3b !important;
+  box-shadow: 0 1 px 0 0 #ffeb3b !important;
+}
+
+input.input-color:focus + label {
+  color: #ffeb3b !important;
+}
+.wr {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background: url(../src/images/background_mivida.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  border-top: rgb(186, 147, 94) 2px solid;
+}
+
+.Navbar {
+  height: 130px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.logo {
+  height: 130px;
+  width: 200px;
+  background: url(../src/images/mivida_logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.links {
+  font-family: 'Tenor Sans', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-right: 50px;
+  padding-left: 50px;
+  color: rgb(186, 147, 94);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(186, 147, 94);
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: rgb(250, 200, 132);
+  font-weight: 650;
+}
+
+.bl1 {
+  background: url(../src/images/block1_example.jpg);
+}
+
+.bl2 {
+  background: url(../src/images/block2_example.jpg);
+}
+
+.bl3 {
+  background: url(../src/images/block3_example.jpg);
+}
+
+.bl4 {
+  background: url(../src/images/block4_example.jpg);
+}
+
+.bl5 {
+  background-color: #0c323e;
+  display: grid;
+  grid-template-rows: 110px auto;
+  grid-template-areas:
+    'header header header'
+    'form form contact';
+}
+
+.mainBackground {
+  background-color: #0c323e;
+}
+
+#contact-form {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactWrapper {
+  height: 100%;
+  width: 100%;
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact {
+  height: 70%;
+  width: 80%;
+  min-height: 300px;
+  color: rgb(186, 147, 94);
+  background: rgb(19, 81, 100);
+  border: rgb(186, 147, 94) 1px solid;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactLine {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactLine i {
+  margin-right: 10px;
+}
+.contactLine a {
+  color: rgb(186, 147, 94);
+  text-decoration: none;
+}
+
+.contactLine a:hover {
+  color: rgb(250, 200, 132);
+}
+
+#mapShow:hover {
+  color: rgb(250, 200, 132);
+  cursor: pointer;
+}
+
+.map {
+  height: 1px;
+  width: 1px;
+  background: #fff;
+}
+.mapSmall {
+  height: 1px;
+  width: 1px;
+  background: #fff;
+}
+
+.mapWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.expand {
+  position: relative;
+  height: 450px;
+  width: 600px;
+  transition: all 1s ease-out;
+}
+.expandSmall {
+  position: relative;
+  height: 600px;
+  width: 400px;
+  transition: all 1s ease-out;
+}
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  color: rgb(186, 147, 94);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.closeButton:hover {
+  color: rgb(250, 200, 132);
+}
+.block {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: rgb(186, 147, 94) 2px solid;
+}
+
+.heading {
+  color: rgb(186, 147, 94);
+  margin-left: 40px;
+  margin-top: 50px;
+  font-size: 3rem;
+  font-family: 'Tenor Sans', sans-serif;
+  grid-area: header;
+}
+#contact-form .heading {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.contact .heading {
+  margin: 0;
+  font-size: 2rem;
+}
+.frontText {
+  width: 250px;
+  color: white;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 20vh;
+  margin-left: 10vw;
+}
+
+.buttonScroll {
+  padding: 3px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 0.8rem;
+  line-height: 0.7;
+  color: rgb(250, 200, 132);
+  font-weight: 450;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+  height: 60px;
+  width: 60px;
+  background: url(../src/images/logo_small.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.buttonScroll:hover {
+  opacity: 1;
+  border: rgb(250, 200, 132) 1px solid;
+  transition: all 0.5s ease-out;
+}
+
+.navmedium {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: rgb(186, 147, 94);
+}
+
+.menu-btn {
+  padding: 5px;
+  padding-bottom: 0px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.selected {
+  border: rgb(250, 200, 132) 1px solid;
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+.selected .btn-line {
+  background-color: rgb(250, 200, 132);
+  transition: all 0.5s ease-out;
+}
+
+.slidingMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 200px;
+  background: rgb(12, 50, 62);
+  opacity: 0;
+}
+
+.slidingMenu .links {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.show {
+  opacity: 1;
+  background: rgba(12, 50, 62, 0.85);
+  transition: all 1s ease-out;
+}
+
+.form-control {
+  font-family: 'Montserrat', sans-serif !important;
+  background: rgb(19, 81, 100) !important;
+  color: rgb(250, 200, 132) !important;
+}
+
+.form-group label {
+  font-family: 'Tenor Sans', sans-serif !important;
+  color: rgb(186, 147, 94);
+}
+input.form-control {
+  font-family: 'Tenor Sans', sans-serif !important;
+  border-bottom: 1px solid rgb(186, 147, 94) !important;
+  box-shadow: 0 1 px 0 0 rgb(186, 147, 94) !important;
+}
+
+input.form-control:focus {
+  border-bottom: 1px solid rgb(250, 200, 132) !important;
+  box-shadow: 0 1.5px 0 0 rgb(250, 200, 132) !important;
+}
+
+.btn-primary {
+  background: rgb(12, 50, 62) !important;
+  border: 1px solid rgb(186, 147, 94) !important;
+  color: rgb(186, 147, 94);
+}
+
+.btn-primary:hover {
+  border: 1px solid rgb(250, 200, 132) !important;
+  color: rgb(250, 200, 132);
+}
+
+.submitMessage {
+  color: rgb(186, 147, 94);
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.giftCard {
+  margin: 30px;
+  padding: 50px;
+  border: rgb(186, 147, 94) 1px solid;
+  background: rgb(12, 50, 62);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 1px 1px 10px rgba(250, 200, 132, 0.8);
+}
+
+.yhteenveto {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.yhteenveto span {
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(250, 200, 132);
+}
+
+.lahettaja {
+  margin: 20px;
+  padding: 20px;
+  border: rgb(250, 200, 132) 1px solid;
+}
+
+.merchantList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+ 
+}
+.merchantItem {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 780px) and (max-width: 900px) {
+  .links {
+    padding-right: 0px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 780px) {
+  .wrapper {
+    background-position: center;
+  }
+  .contactLine {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .contact {
+    height: 60%;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .merchantList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Navbar {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .frontText {
+    width: 200px;
+    font-size: 2.5rem;
+  }
+  .wrapper {
+    background-position: center;
+    background-position-x: -350px;
+  }
+  .bl5 {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contact {
+    height: 70%;
+    width: 80%;
+    min-height: 250px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contactLine {
+    font-size: 1.3rem;
+  }
+  .giftCard {
+    margin: 20px;
+    padding: 30px;
+  }
+  .giftCard h3 {
+    font-size: 2rem;
+  }
+  .yhteenveto {
+    grid-template-columns: 1fr;
+  }
+  .merchantList {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
