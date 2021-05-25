@@ -8,8 +8,8 @@ const transport = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'testmihhei@gmail.com',
-    pass: 'Astro1Gastro5',
+    user: config.get("emailUser"),
+    pass: config.get("emailPassword"),
   },
   tls: {
     rejectUnauthorized: false,
@@ -40,7 +40,7 @@ router.post('/send', (req, res, next) => {
   `;
 
   const mail = {
-    from: name,
+    from: `${name} <info@mivida.fi>`,
     to: 'mihail.heimonen@gmail.com', /*sofiya.pekki@gmail.com',*/
     subject: 'New Message from MiVida Contact Form',
     html: output,

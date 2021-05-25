@@ -3,6 +3,7 @@ const Giftcard = require("../models/Giftcard");
 const router = Router();
 const vismaPay = require("visma-pay");
 const config = require("config");
+const sendGiftCard = require("../giftcard/sendGiftCard");
 
 // Set private key and api key
 vismaPay.setPrivateKey(config.get("vismaPrivateKey"));
@@ -37,6 +38,7 @@ router.get("/", async (req, res) => {
           message =
             "Payment was successful, you will receive a receipt by e-mail.";
           paymentStatus = "successful";
+          sendGiftCard(order);
           break;
         case "4":
           message =
