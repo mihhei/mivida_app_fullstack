@@ -31,6 +31,7 @@
     "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
+    "file-saver": "^2.0.5",
     "html-pdf": "^3.0.0",
     "jsonwebtoken": "^8.5.1",
     "materialize-css": "^1.0.0-rc.2",
