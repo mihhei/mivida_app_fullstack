@@ -19,16 +19,16 @@ module.exports = ({ nameFrom, nameTo, summa, message, emailFrom, cardId }) => {
           }
           .giftCard {
             margin: auto;
-            margin-top: 50px;
+            margin-top: 20px;
             width: 80%;
             height: 80%;
-            padding: 50px;
+            padding: 30px;
             border: rgb(186, 147, 94) 1px solid;
             box-shadow: 1px 1px 10px rgba(250, 200, 132, 0.8);
           }
           .lahettaja {
-            margin: 20px;
-            padding: 20px;
+            margin: 10px;
+            padding: 10px;
             border: rgb(250, 200, 132) 1px solid;
           }
           </style>
