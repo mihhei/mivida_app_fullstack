@@ -7,7 +7,6 @@ module.exports = ({ nameFrom, nameTo, summa, message, emailFrom, cardId }) => {
           <title>PDF Result Template</title>
           <style>
           body {
-            font-size: 1.5rem;
             color: rgb(186, 147, 94);
           }
           p {
@@ -20,7 +19,7 @@ module.exports = ({ nameFrom, nameTo, summa, message, emailFrom, cardId }) => {
           }
           .giftCard {
             margin: auto;
-            margin-top: 200px;
+            margin-top: 50px;
             width: 80%;
             height: 80%;
             padding: 50px;
