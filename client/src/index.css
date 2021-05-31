@@ -1,7 +1,7 @@
-@import '~materialize-css/dist/css/materialize.min.css';
+@import "~materialize-css/dist/css/materialize.min.css";
 
 * {
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: "Tenor Sans", sans-serif;
   color: rgb(186, 147, 94);
   box-sizing: border-box;
 }
@@ -31,10 +31,10 @@ input.input-color:focus + label {
 .wrapper {
   height: 100vh;
   width: 100%;
-  background: url(../src/images/background_mivida.jpg);
+  background: url(../src/images/first_page.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
   border-top: rgb(186, 147, 94) 2px solid;
 }
 
@@ -57,7 +57,7 @@ input.input-color:focus + label {
 }
 
 .links {
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: "Tenor Sans", sans-serif;
   /*font-family: 'Montserrat', sans-serif;*/
   font-size: 1.2rem;
   font-weight: 600;
@@ -103,8 +103,8 @@ input.input-color:focus + label {
   display: grid;
   grid-template-rows: 110px auto;
   grid-template-areas:
-    'header header header'
-    'form form contact';
+    "header header header"
+    "form form contact";
 }
 
 .mainBackground {
@@ -233,7 +233,7 @@ input.input-color:focus + label {
   margin-left: 40px;
   margin-top: 50px;
   font-size: 3rem;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: "Tenor Sans", sans-serif;
   grid-area: header;
 }
 #contact-form .heading {
@@ -246,18 +246,18 @@ input.input-color:focus + label {
   font-size: 2rem;
 }
 .frontText {
-  width: 250px;
-  color: white;
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
+  width: 400px;
+  height: 200px;
+  background: url(../src/images/enjoy.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-top: 20vh;
   margin-left: 10vw;
 }
 
 .buttonScroll {
   padding: 3px;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: "Tenor Sans", sans-serif;
   font-size: 0.8rem;
   line-height: 0.7;
   color: rgb(250, 200, 132);
@@ -343,17 +343,17 @@ input.input-color:focus + label {
 }
 
 .form-control {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   background: rgb(19, 81, 100) !important;
   color: rgb(250, 200, 132) !important;
 }
 
 .form-group label {
-  font-family: 'Tenor Sans', sans-serif !important;
+  font-family: "Tenor Sans", sans-serif !important;
   color: rgb(186, 147, 94);
 }
 input.form-control {
-  font-family: 'Tenor Sans', sans-serif !important;
+  font-family: "Tenor Sans", sans-serif !important;
   border-bottom: 1px solid rgb(186, 147, 94) !important;
   box-shadow: 0 1 px 0 0 rgb(186, 147, 94) !important;
 }
@@ -376,7 +376,7 @@ input.form-control:focus {
 
 .submitMessage {
   color: rgb(186, 147, 94);
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: "Tenor Sans", sans-serif;
   font-size: 1.2rem;
 }
 
@@ -412,7 +412,6 @@ input.form-control:focus {
 .merchantList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
- 
 }
 .merchantItem {
   margin-bottom: 20px;
@@ -443,6 +442,13 @@ input.form-control:focus {
   color: rgb(250, 200, 132);
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 @media screen and (min-width: 780px) and (max-width: 900px) {
   .links {
     padding-right: 0px;
@@ -452,7 +458,7 @@ input.form-control:focus {
 
 @media screen and (min-width: 500px) and (max-width: 780px) {
   .wrapper {
-    background-position: center;
+    background-position-x: -350px;
   }
   .contactLine {
     font-size: 1rem;
@@ -464,10 +470,13 @@ input.form-control:focus {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .frontText {
+    width: 300px;
+    height: 200px;
+  }
   .merchantList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   
   }
 }
 
@@ -478,11 +487,10 @@ input.form-control:focus {
   }
   .frontText {
     width: 200px;
-    font-size: 2.5rem;
+    height: 100px;
   }
   .wrapper {
-    background-position: center;
-    background-position-x: -350px;
+    background-position-x: -500px;
   }
   .bl5 {
     display: flex;

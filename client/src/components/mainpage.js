@@ -5,7 +5,8 @@ export const MainPage = () => {
   return (
     <div className="wrapper" id="etusivu">
       <Navbar />
-      <div className="frontText">Enjoy every moment ...</div>
+      <div className="frontText">
+      </div>
     </div>
   );
 };
