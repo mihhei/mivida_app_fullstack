@@ -31,13 +31,17 @@ export const FeedBackForm = () => {
         'Content-Type': 'application/json',
       },
     });
+    console.log(response);
     const data = await response.json();
-    if (data.status === 'success') {
+    console.log (data);
+    setSubmitMessage( data.status ? 'Viestisi on lähetetty onnistuneesti': "Viestin lähettäminen epäonnistui, yritä uudelleen!");
+    resetForm();
+    /*if (data.status === 'success') {
       setSubmitMessage('Viestisi on lähetetty onnistuneesti'); 
       resetForm();
     } else if(data.status === 'fail') {
       setSubmitMessage("Viestin lähettäminen epäonnistui, yritä uudelleen!");
-    }
+    }*/
   };
 
   const resetForm = () => {

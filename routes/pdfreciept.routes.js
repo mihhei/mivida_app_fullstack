@@ -4,6 +4,7 @@ const pdfTemplate = require("../documents/htmlForReciept");
 const Giftcard = require("../models/Giftcard");
 const router = Router();
 const path = require("path");
+const fs = require("fs");
 
 router.post("/create-pdf", async (req, res) => {
   try {
@@ -28,7 +29,25 @@ router.post("/create-pdf", async (req, res) => {
 router.get("/fetch-pdf/:order?", (req, res) => {
   const orderId =
     typeof req.params.order !== "undefined" ? req.params.order : null;
-  res.sendFile(path.join(__dirname, "..", "tmp", `reciept_${orderId}.pdf`));
+  res.sendFile(
+    path.join(__dirname, "..", "tmp", `reciept_${orderId}.pdf`),
+    (err) => {
+      if (err) {
+        next(err);
+      } else {
+        // delete a reciept file after sending
+        fs.unlink(
+          path.join(__dirname, "..", "tmp", `reciept_${orderId}.pdf`),
+          (err) => {
+            if (err) {
+              throw err;
+            }
+            console.log(`reciept_${orderId}.pdf file is deleted.`);
+          }
+        );
+      }
+    }
+  );
 });
 
 module.exports = router;

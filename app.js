@@ -14,6 +14,7 @@ app.use("/create-charge", require("./routes/createcharge.routes"));
 app.use("/e-payment-return", require("./routes/epaymentreturn.routes"));
 app.use("/e-payment-notify", require("./routes/epaymentnotify.routes"));
 app.use("/reciept", require("./routes/pdfreciept.routes"));
+app.use("/insta", require("./routes/instagram.routes"));
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "client", "build")));

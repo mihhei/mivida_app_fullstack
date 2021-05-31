@@ -1,5 +1,5 @@
-import React from 'react';
-import { Heading } from './heading';
+import React from "react";
+import { Heading } from "./heading";
 
 export const Block1 = () => {
   return (

@@ -422,6 +422,27 @@ input.form-control:focus {
   align-items: center;
 }
 
+.instaGrid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.instaMorePicture {
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.instaMorePicture span {
+  cursor: pointer;
+}
+.instaMorePicture span:hover {
+  color: rgb(250, 200, 132);
+}
+
 @media screen and (min-width: 780px) and (max-width: 900px) {
   .links {
     padding-right: 0px;
@@ -494,5 +515,12 @@ input.form-control:focus {
   .merchantList {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .instaGrid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
   }
 }
