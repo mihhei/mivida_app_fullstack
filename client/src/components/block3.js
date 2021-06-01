@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Heading } from "./heading";
 import { InstagramFetching } from "./instagramfetching";
 import { GetMorePicture } from "./getmorepicture";
