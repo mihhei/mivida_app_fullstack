@@ -31,8 +31,8 @@ input.input-color:focus + label {
 .wrapper {
   height: 100vh;
   width: 100%;
-  background: url(../src/images/first_page.jpg);
-  background-position: center;
+  background: url(../src/images/background_desktop.jpg);
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   border-top: rgb(186, 147, 94) 2px solid;
